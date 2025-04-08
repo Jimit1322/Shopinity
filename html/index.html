@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAJ</title>
+    <link rel="stylesheet" href="/css/common-style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="dropdown">
+                <button class="dropbtn" id="categoryBtn">
+                    <i class="fa-solid fa-bars"></i> Categories
+                </button>
+                <div class="dropdown-content" id="categoryDropdown">
+                    <a href="viewall.html?category=electronics">Electronics</a>
+                    <a href="viewall.html?category=fashion">Fashion</a>
+                    <a href="viewall.html?category=home-garden-kitchen">Home Appliances</a>
+                    <a href="viewall.html?category=apparels-clothing">Clothes</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <a href="mycart.html" class="nav-link">
+                <i class="fa-solid fa-cart-shopping"></i> MyCart
+            </a>
+            <span class="country-name">India</span>
+        </div>
+    </nav>
+    <header class="header">
+       
+        <div class="header-left">
+           
+            <span class="company-name"> <i class="fa-solid fa-crown"></i>  R.A.J</span>
+        </div>
+        <div class="header-center">
+            <form action="/search" method="get" class="search-form">
+                <input type="text" name="q" placeholder="Search for items..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a href="login.html" class="auth-link">Login/Register</a>
+            
+        </div>
+    </header>
+    <div class="slider">
+        <div class="slide fade">
+            <img src="Image1.jpeg" alt="Image 1">
+            <div class="caption">
+                <a href="#" class="shop-now">Shop Now</a>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="Image2.jpeg" alt="Image 2">
+            <div class="caption">
+                <a href="#" class="shop-now">Shop Now</a>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="Image3.jpeg" alt="Image 3">
+            <div class="caption">
+                <a href="#" class="shop-now">Shop Now</a>
+            </div>
+        </div>
+        <!-- Navigation arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="container">
+            <div class="header1">
+                <a href="#">Today's Deal</a>
+                <a href="viewall.html?category=today-deal">View All</a>
+            </div>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 1">
+                    <p>Product 1</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+                    <p>Price:10Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 2">
+                    <p>Product 2</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 2', 15)">Add to Cart</button>
+                    <p>Price:15Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 3">
+                    <p>Product 3</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 3', 25)">Add to Cart</button>
+                    <p>Price:25Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 4">
+                    <p>Product 4</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 4', 35)">Add to Cart</button>
+                    <p>Price:35Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 5">
+                    <p>Product 5</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 5', 45)">Add to Cart</button>
+                    <p>Price:45Rs</p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="features-box">
+            <div class="feature" onclick="navigateToPage('free-delivery.html')">
+                <p>Free Delivery</p>
+            </div>
+            <div class="feature" onclick="navigateToPage('return.html')">
+                <p>90 Day Return</p>
+            </div>
+            <div class="feature" onclick="navigateToPage('securepay.html')">
+                <p>Secure Payment</p>
+            </div>
+            <div class="feature" onclick="navigateToPage('support.html')">
+                <p>24/7 Support</p>
+            </div>
+            <div class="feature" onclick="navigateToPage('gift-services.html')">
+                <p>Gift Services</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="header1">
+                <a href="#">Top Categories of month</a>
+               
+            </div>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 1">
+                    <p>Product 1</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+                    <p>Price:10Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 2">
+                    <p>Product 2</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 2', 20)">Add to Cart</button>
+                    <p>Price:20Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 3">
+                    <p>Product 3</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 3', 30)">Add to Cart</button>
+                    <p>Price:30Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 4">
+                    <p>Product 4</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 4', 40)">Add to Cart</button>
+                    <p>Price:40Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 5">
+                    <p>Product 5</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 5', 50)">Add to Cart</button>
+                    <p>Price:50Rs</p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="container">
+            <div class="header1">
+                <a href="#">Apparels & Clothing</a>
+                <a href="viewall.html?category=apparels-clothing">View All</a>
+               
+            </div>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 1">
+                    <p>Product 1</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+                    <p>Price:10Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 2">
+                    <p>Product 2</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 2', 20)">Add to Cart</button>
+                    <p>Price:20Rs</p>
+                </div>
+
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 3">
+                    <p>Product 3</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 3', 30)">Add to Cart</button>
+                    <p>Price:30Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 4">
+                    <p>Product 4</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 4', 40)">Add to Cart</button>
+                    <p>Price:40Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 5">
+                    <p>Product 5</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 5', 50)">Add to Cart</button>
+                    <p>Price:50Rs</p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="container">
+            <div class="header1">
+                <a href="#">Home ,Garden & Kitchen</a>
+                <a href="viewall.html?category=home-garden-kitchen">View All</a>
+               
+            </div>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 1">
+                    <p>Product 1</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+                    <p>Price:10Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 2">
+                    <p>Product 2</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 2', 20)">Add to Cart</button>
+                    <p>Price:20Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 3">
+                    <p>Product 3</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 3', 30)">Add to Cart</button>
+                    <p>Price:30Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 4">
+                    <p>Product 4</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 4', 40)">Add to Cart</button>
+                    <p>Price:40Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 5">
+                    <p>Product 5</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 5', 50)">Add to Cart</button>
+                    <p>Price:50Rs</p>
+                </div>
+              
+            </div>
+        </div>
+        <div class="container">
+            <div class="header1">
+                <a href="#">Hot New Arrivals</a>
+                <a href="viewall.html?category=hot-new-arrivals">View All</a>
+               
+            </div>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 1">
+                    <p>Product 1</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+                    <p>Price:10Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 2">
+                    <p>Product 2</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 2', 20)">Add to Cart</button>
+                    <p>Price:20Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 3">
+                    <p>Product 3</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 3', 30)">Add to Cart</button>
+                    <p>Price:30Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 4">
+                    <p>Product 4</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 4', 40)">Add to Cart</button>
+                    <p>Price:40Rs</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/100" alt="Product 5">
+                    <p>Product 5</p>
+                    <button class="add-to-cart" onclick="addToCart('Product 5', 50)">Add to Cart</button>
+                    <p>Price:50Rs</p>
+                </div>
+              
+            </div>
+        </div>
+        <div class="subscribe-box">
+            <span class="subscribe-text">Subscribe to get information about products and coupons</span>
+            <form onsubmit="event.preventDefault(); subscribe();">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+           
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Phone: +918401351730</p>
+                    <p>Address: Malviya nagar, Jaipur, India</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus-g"></i></i></a>
+                    </div>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="policy.html">Policy</a>
+                    <a href="policy.html">Terms & Conditions</a>
+                    <a href="shipping.html">Shipping</a>
+                    <a href="shipping.html">Return</a>
+                    <a href="Faq.html">FAQs</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Business</h3>
+                    <a href="press.html">Our Press</a>
+                  
+                    <a href="#">My Account</a>
+                    <a href="shop.html">Shop</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Raj. All Rights Reserved.</p>
+              
+                <div class="payment-methods">
+                    <p>We Using Safe Payment for :</p>
+                <a href="https://www.visa.com"> <img src="/images/visa.webp" alt="Visa"></a>    
+                  <a href="https://www.mastercard.com">  <img src="/images/mastercard.jpeg" alt="MasterCard"></a>
+                  <a href="https://www.paypal.com">  <img src="/images/paypal.png" alt="PayPal"></a>
+                  <a href="https://www.bhimupi.org.in">  <img src="/images/upi.webp" alt="UPI"></a>
+                </div>
+              
+            </div>
+        </footer>
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

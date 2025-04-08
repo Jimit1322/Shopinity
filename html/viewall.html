@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/common-style.css">
+<link rel="stylesheet" href="/css/viewall.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="dropdown">
+                <button class="dropbtn" id="categoryBtn">
+                    <i class="fa-solid fa-bars"></i> Categories
+                </button>
+                <div class="dropdown-content" id="categoryDropdown">
+                    <a href="#electronics">Electronics</a>
+                    <a href="#fashion">Fashion</a>
+                    <a href="#home-appliances">Home Appliances</a>
+                    <a href="#Clothes">Clothes</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <a href="mycart.html" class="nav-link">
+                <i class="fa-solid fa-cart-shopping"></i> MyCart
+            </a>
+            <span class="country-name">India</span>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 id="category-title">All Products</h1>
+        <div id="product-list" class="product-list">
+           
+        </div>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Raj. All Rights Reserved.</p>
+    </footer>
+    <script >
+        const categories = [
+        {
+            title: "Today's Deal",
+            id: "today-deal",
+            products: [
+                { name: "Product 1", image: "https://via.placeholder.com/100",price:10},
+                { name: "Product 2", image: "https://via.placeholder.com/100",price:20},
+                { name: "Product 3", image: "https://via.placeholder.com/100",price:30},
+                { name: "Product 4", image: "https://via.placeholder.com/100",price:40},
+                { name: "Product 5", image: "https://via.placeholder.com/100",price:50}
+            ]
+        },
+        
+        {
+            title: "Apparels & Clothing",
+            id: "apparels-clothing",
+            products: [
+                { name: "Product 1", image: "https://via.placeholder.com/100" ,price:10},
+                { name: "Product 2", image: "https://via.placeholder.com/100" ,price:10},
+                { name: "Product 3", image: "https://via.placeholder.com/100",price:10},
+                { name: "Product 4", image: "https://via.placeholder.com/100" ,price:10},
+                { name: "Product 5", image: "https://via.placeholder.com/100" ,price:10}
+            ]
+        },
+        {
+            title: "Home, Garden & Kitchen",
+            id: "home-garden-kitchen",
+            products: [
+                { name: "Product 1", image: "https://via.placeholder.com/100" ,price:10},
+                { name: "Product 2", image: "https://via.placeholder.com/100" ,price:10},
+                { name: "Product 3", image: "https://via.placeholder.com/100",price:10 },
+                { name: "Product 4", image: "https://via.placeholder.com/100" ,price:10},
+                { name: "Product 5", image: "https://via.placeholder.com/100",price:10}
+            ]
+        },
+        {
+            title: "Hot New Arrivals",
+            id: "hot-new-arrivals",
+            products: [
+                { name: "Product 1", image: "https://via.placeholder.com/100" ,price:10},
+                { name: "Product 2", image: "https://via.placeholder.com/100" ,price:10},
+                { name: "Product 3", image: "https://via.placeholder.com/100" ,price:10},
+                { name: "Product 4", image: "https://via.placeholder.com/100",price:10 },
+                { name: "Product 5", image: "https://via.placeholder.com/100",price:10 }
+            ]
+        },
+
+
+    ];
+    
+    // Function to load category based on URL
+    function loadCategory() {
+        const params = new URLSearchParams(window.location.search);
+        const categoryId = params.get("category"); // Get category from URL (e.g., ?category=apparels-clothing)
+    
+        const category = categories.find(cat => cat.id === categoryId);
+    
+        if (!category) {
+            document.getElementById("category-title").textContent = "Category Not Found";
+            return;
+        }
+    
+        // Update the title
+        document.getElementById("category-title").textContent = `All ${category.title}`;
+    
+        // Generate Product List
+        const productList = document.getElementById("product-list");
+        productList.innerHTML = "" ; // Clear old content
+    
+        category.products.forEach(product => {
+           
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product");
+    
+            const img = document.createElement("img");
+            img.src = product.image;
+            img.alt = product.name;
+    
+            const name = document.createElement("p");
+            name.textContent = product.name;
+            
+            const addToCartBtn = document.createElement("button");
+            addToCartBtn.textContent = `${product.price}Rs  Add to Cart `;
+           
+            addToCartBtn.addEventListener("click", () => addToCart(product.name,product.price));
+           
+          
+            productDiv.appendChild(img);
+            productDiv.appendChild(name);
+            productDiv.appendChild(addToCartBtn);
+            productList.appendChild(productDiv);
+
+           
+        });
+       
+    }
+
+  
+    function addToCart(name, price) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({name,price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Added to cart!");
+    }
+    
+    // Load the category when the page loads
+    document.addEventListener("DOMContentLoaded", loadCategory);
+
+   
+  
+    </script>
+    <script src="/javascript/script.js"></script>
+    
+</body>
+</html>

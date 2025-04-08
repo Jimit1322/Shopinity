@@ -1,0 +1,63 @@
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Support Options */
+.support-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.support-btn {
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+.email { background: #48A6A7; }
+.phone { background: #48A6A7; }
+.chat { background: #48A6A7; }
+
+/* .support-btn:hover {
+    opacity: 0.8;
+} */
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #9ACBD0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #48A6A7;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .support-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

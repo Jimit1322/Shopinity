@@ -1,0 +1,63 @@
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gift Options */
+.gift-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.gift-btn {
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+.wrapping { background: #48A6A7; }
+.message { background: #48A6A7; }
+.card { background: #48A6A7; }
+
+
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #9ACBD0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #48A6A7;
+}
+footer{
+    margin: 10px;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .gift-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

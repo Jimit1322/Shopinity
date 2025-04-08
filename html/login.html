@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/common-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="dropdown">
+                <button class="dropbtn" id="categoryBtn">
+                    <i class="fa-solid fa-bars"></i> Categories
+                </button>
+                <div class="dropdown-content" id="categoryDropdown">
+                    <a href="#electronics">Electronics</a>
+                    <a href="#fashion">Fashion</a>
+                    <a href="#home-appliances">Home Appliances</a>
+                    <a href="#Clothes">Clothes</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <a href="#mycart" class="nav-link">
+                <i class="fa-solid fa-cart-shopping"></i> MyCart
+            </a>
+            <span class="country-name">India</span>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="form-box">
+            <h2 id="form-title">Login</h2>
+
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button id="button" type="submit">Login</button>
+                <p>Don't have an account? <a href="#" onclick="toggleForm()">Register</a></p>
+            </form>
+
+            <form id="register-form" style="display: none;">
+                <input type="text" id="register-name" placeholder="Full Name" required>
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Password" required>
+                <button id="button"type="submit">Register</button>
+                <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Raj. All Rights Reserved.</p>
+    </footer>
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

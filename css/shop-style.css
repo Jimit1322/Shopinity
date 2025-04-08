@@ -1,0 +1,38 @@
+header {
+    text-align: center;
+    padding: 50px;
+    background: #f4f4f4;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    .shop-header h1 {
+        font-size: 2rem;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        max-width: 300px;
+    }
+}

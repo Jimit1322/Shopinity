@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secure-payment</title>
+    <link rel="stylesheet" href="/css/securepay.css">
+    <link rel="stylesheet" href="/css/common-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="dropdown">
+                <button class="dropbtn" id="categoryBtn">
+                    <i class="fa-solid fa-bars"></i> Categories
+                </button>
+                <div class="dropdown-content" id="categoryDropdown">
+                    <a href="#electronics">Electronics</a>
+                    <a href="#fashion">Fashion</a>
+                    <a href="#home-appliances">Home Appliances</a>
+                    <a href="#Clothes">Clothes</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <a href="#mycart" class="nav-link">
+                <i class="fa-solid fa-cart-shopping"></i> MyCart
+            </a>
+            <span class="country-name">India</span>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>🔒 Secure Payment</h1>
+        <p>We provide safe and secure payment options. Choose your preferred method:</p>
+
+        <div class="payment-options">
+            <a href="https://www.paypal.com" target="_blank" class="payment-btn paypal"> <img src="/images/paypal.png" alt="PayPal">  Pay With Paypal</a>
+            <a href="https://www.visa.com" target="_blank" class="payment-btn visa"> <img src="/images/visa.webp" alt="Visa">Pay With Visa</a>
+            <a href="https://www.mastercard.com" target="_blank" class="payment-btn mastercard"><img src="/images/mastercard.jpeg" alt="MasterCard">Pay With MasterCard</a>
+            <a href="https://www.bhimupi.org.in" target="_blank" class="payment-btn upipay"><img src="/images/upi.webp" alt="UPI">Pay With UPI</a>
+        </div>
+        <a href="index.html" class="back-btn">⬅ Back to Home</a>
+    </div>
+       
+        <footer>
+            <p>&copy; 2024 Raj. All Rights Reserved.</p>
+        </footer>
+        <script src="/javascript/script.js"></script>
+</body>
+</html>
